@@ -1,0 +1,225 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    darkMode: "media",
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './vendor/laravel/jetstream/**/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.vue',
+        'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}',
+        './node_modules/flowbite/**/*.js'
+    ],
+
+    theme: {
+        extend: {
+            colors: {
+                // primary: { "50": "#eff6ff", "100": "#dbeafe", "200": "#bfdbfe", "300": "#93c5fd", "400": "#60a5fa", "500": "#3b82f6", "600": "#2563eb", "700": "#1d4ed8", "800": "#1e40af", "900": "#1e3a8a", "950": "#172554" }
+
+                'primary': {
+                    '50': '#f4f7fb',
+                    '100': '#e7eef7',
+                    '200': '#cbdbec',
+                    '300': '#9dbcdc',
+                    '400': '#6898c8',
+                    '500': '#447ab3',
+                    '600': '#336196',
+                    '700': '#2a4e7a',
+                    '800': '#264466',
+                    '900': '#243a56',
+                    '950': '#182639',
+                },
+
+                /* 'primary': {
+                    '50': '#ebfeff',
+                    '100': '#cefcff',
+                    '200': '#a2f6ff',
+                    '300': '#63edfd',
+                    '400': '#1cdaf4',
+                    '500': '#00b8d4',
+                    '600': '#0396b7',
+                    '700': '#0a7894',
+                    '800': '#126078',
+                    '900': '#145065',
+                    '950': '#063546',
+                }, */
+                'secondary': {
+                    '50': '#f3f7fb',
+                    '100': '#e4ebf5',
+                    '200': '#cfddee',
+                    '300': '#aec7e2',
+                    '400': '#84a7d1',
+                    '500': '#6b8fc6',
+                    '600': '#5877b8',
+                    '700': '#4d66a8',
+                    '800': '#43548a',
+                    '900': '#3a476e',
+                    '950': '#272d44',
+                },
+
+                'secondary-dark': {
+                    '50': '#f6f6f6',
+                    '100': '#e7e7e7',
+                    '200': '#d1d1d1',
+                    '300': '#b0b0b0',
+                    '400': '#888888',
+                    '500': '#6d6d6d',
+                    '600': '#5d5d5d',
+                    '700': '#4f4f4f',
+                    '800': '#454545',
+                    '900': '#333333',
+                    '950': '#262626',
+                },
+
+
+                'accent1': {
+                    '50': '#fffbea',
+                    '100': '#fff2c5',
+                    '200': '#ffe685',
+                    '300': '#ffd246',
+                    '400': '#ffbd1b',
+                    '500': '#ff9900',
+                    '600': '#e27200',
+                    '700': '#bb4d02',
+                    '800': '#983b08',
+                    '900': '#7c310b',
+                    '950': '#481700',
+                },
+
+                'accent1-dark': {
+                    '50': '#f0f7fe',
+                    '100': '#deecfb',
+                    '200': '#c5dff8',
+                    '300': '#9dcbf3',
+                    '400': '#6eadec',
+                    '500': '#4d8fe5',
+                    '600': '#3773d9',
+                    '700': '#2e5ec7',
+                    '800': '#2b4da2',
+                    '900': '#284480',
+                    '950': '#1d2b4e',
+                },
+
+                'accent2': {
+                    '50': '#f3faf3',
+                    '100': '#e3f5e3',
+                    '200': '#c8eac9',
+                    '300': '#9dd89f',
+                    '400': '#6bbd6e',
+                    '500': '#4caf50',
+                    '600': '#358438',
+                    '700': '#2d6830',
+                    '800': '#275429',
+                    '900': '#224525',
+                    '950': '#0e2510',
+                },
+
+                'accent2-dark': {
+                    '50': '#ffffe7',
+                    '100': '#feffc1',
+                    '200': '#fffd86',
+                    '300': '#fff441',
+                    '400': '#ffe60d',
+                    '500': '#ffd700',
+                    '600': '#d19e00',
+                    '700': '#a67102',
+                    '800': '#89580a',
+                    '900': '#74480f',
+                    '950': '#442604',
+                },
+
+
+                'natural': {
+                    '50': '#f5f5f5',
+                    '100': '#efefef',
+                    '200': '#dcdcdc',
+                    '300': '#bdbdbd',
+                    '400': '#989898',
+                    '500': '#7c7c7c',
+                    '600': '#656565',
+                    '700': '#525252',
+                    '800': '#464646',
+                    '900': '#3d3d3d',
+                    '950': '#292929',
+                },
+
+                'electric-blue': {
+                    '50': '#f0f7fe',
+                    '100': '#deecfb',
+                    '200': '#c5dff8',
+                    '300': '#9dcbf3',
+                    '400': '#6eadec',
+                    '500': '#4d8fe5',
+                    '600': '#3773d9',
+                    '700': '#2e5ec7',
+                    '800': '#2b4da2',
+                    '900': '#284480',
+                    '950': '#1d2b4e',
+                },
+                'gold': {
+                    '50': '#ffffe7',
+                    '100': '#feffc1',
+                    '200': '#fffd86',
+                    '300': '#fff441',
+                    '400': '#ffe60d',
+                    '500': '#ffd700',
+                    '600': '#d19e00',
+                    '700': '#a67102',
+                    '800': '#89580a',
+                    '900': '#74480f',
+                    '950': '#442604',
+                },
+            },
+            /* fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            }, */
+        },
+        fontFamily: {
+            'body': [
+                'Inter',
+                'ui-sans-serif',
+                'system-ui',
+                '-apple-system',
+                'system-ui',
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                'Arial',
+                'Noto Sans',
+                'sans-serif',
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+                'Noto Color Emoji'
+            ],
+            'sans': [
+                'Inter',
+                'ui-sans-serif',
+                'system-ui',
+                '-apple-system',
+                'system-ui',
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                'Arial',
+                'Noto Sans',
+                'sans-serif',
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+                'Noto Color Emoji'
+            ]
+        }
+    },
+
+    plugins: [
+        forms, typography,
+        /* require('flowbite/plugin')({
+            tooltips: true,
+        }), */
+        require('tailwind-scrollbar')],
+};
