@@ -5,11 +5,9 @@ const showConsent = ref(false);
 
 const acceptCookies = () => {
     showConsent.value = false;
-    // You can add logic to store the user's consent in local storage or a cookie
     localStorage.setItem('cookieConsent', 'true');
 };
 
-// Check if the user has already accepted cookies
 if (localStorage.getItem('cookieConsent') !== 'true') {
     onMounted(() => {
         setTimeout(() => {
@@ -20,9 +18,9 @@ if (localStorage.getItem('cookieConsent') !== 'true') {
 </script>
 
 <template>
-    <transition name="slide-up">
+    <Transition enter-active-class="animate__animated animate__bounceInLeft" leave-active-class="animate__animated animate__bounceOutRight">
         <div v-if="showConsent" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50">
-            <div class="container mx-auto flex justify-between items-center">
+            <div class="max-w-screen-xl  mx-auto flex justify-between items-center">
                 <p class="text-sm">
                     Za izboljšanje vaše izkušnje na naši strani uporabljamo piškotke. Z uporabo naše strani se strinjate z uporabo piškotkov.
                 </p>
@@ -31,20 +29,5 @@ if (localStorage.getItem('cookieConsent') !== 'true') {
                 </button>
             </div>
         </div>
-    </transition>
+    </Transition>
 </template>
-
-<style scoped>
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.slide-up-enter-active, .slide-up-leave-active {
-    transition: transform 0.5s ease;
-}
-
-.slide-up-enter, .slide-up-leave-to {
-    transform: translateY(100%);
-}
-</style>

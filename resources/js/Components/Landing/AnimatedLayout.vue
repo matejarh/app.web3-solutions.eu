@@ -1,10 +1,14 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
-defineProps({
+const props = defineProps({
   animationType: {
     default: "fade",
     type: String,
+  },
+  delay: {
+    default: 0,
+    type: Number,
   },
 });
 
@@ -15,7 +19,10 @@ const observer = new IntersectionObserver(
   ([entry]) => {
     const { isIntersecting } = entry;
     if (isIntersecting) {
-      animate.value = isIntersecting;
+        setTimeout(() => {
+            animate.value = isIntersecting;
+        }, props.delay);
+      // animate.value = isIntersecting;
     }
   },
   {
