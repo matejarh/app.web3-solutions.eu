@@ -9,7 +9,7 @@ import AnimatedLayout from "./AnimatedLayout.vue";
   <AnimatedLayout>
     <section class="bg-primary-100 dark:bg-primary-900">
       <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div class="max-w-screen-md mb-8 lg:mb-16">
+        <div class="max-w-screen-md mb-8 lg:mb-16 flex flex-col items-center mx-auto">
           <h2
             class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
           >
