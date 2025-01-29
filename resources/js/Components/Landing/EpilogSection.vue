@@ -1,5 +1,7 @@
 <script setup>
+import { ChartBarIcon, GlobeAltIcon, LightBulbIcon } from "@heroicons/vue/24/solid";
 import AnimatedLayout from "./AnimatedLayout.vue";
+
 </script>
 
 <template>
@@ -12,13 +14,26 @@ import AnimatedLayout from "./AnimatedLayout.vue";
           Naša vizija
         </h2>
         <div
-          class="grid grid-cols-1 gap-8 text-gray-500 sm:gap-12 md:grid-cols-1 lg:grid-cols-1 dark:text-gray-400"
+          class="grid grid-cols-1 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-3 dark:text-gray-400"
         >
-          <p class="w-full text-center text-lg">
-            Verjamemo v moč tehnologije, ki poenostavlja življenja in odpira nove
-            priložnosti. Naš cilj je ustvarjati rešitve, ki spodbujajo rast, povezovanje
-            in uspeh.
-          </p>
+          <div class="flex flex-col items-center">
+            <LightBulbIcon class="w-12 h-12 text-primary-500 mb-4" />
+            <p class="w-full text-center text-lg">
+              Verjamemo v moč tehnologije, ki poenostavlja življenja in odpira nove priložnosti.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <GlobeAltIcon class="w-12 h-12 text-primary-500 mb-4" />
+            <p class="w-full text-center text-lg">
+              Naš cilj je ustvarjati rešitve, ki spodbujajo rast, povezovanje in uspeh.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <ChartBarIcon class="w-12 h-12 text-primary-500 mb-4" />
+            <p class="w-full text-center text-lg">
+              S tehnologijo omogočamo napredek in inovacije za boljšo prihodnost.
+            </p>
+          </div>
         </div>
       </div>
     </section>

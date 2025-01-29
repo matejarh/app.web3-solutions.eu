@@ -5,7 +5,7 @@ import HeroSection from "@/Components/Landing/HeroSection.vue";
 import TopNavigation from "@/Components/Landing/TopNavigation.vue";
 import { ref } from "vue";
 import PageFooter from "../Components/Landing/PageFooter.vue";
-import ContentSection from "../Components/Landing/ContentSection.vue";
+import ComputerRepairSection from "../Components/Landing/ComputerRepairSection.vue";
 import FeaturesSection from "@/Components/Landing/FeaturesSection.vue";
 import LogosSection from "@/Components/Landing/LogosSection.vue";
 import CtaSection from "@/Components/Landing/CtaSection.vue";
@@ -36,7 +36,7 @@ const handleScroll = (n) => {
     <HeroSection id="home" />
     <WebDesignSection id="web_design" />
     <EducationSection id="education" />
-    <ContentSection id="service" />
+    <ComputerRepairSection id="service" />
     <!-- <CtaSection id="cta" /> -->
     <WhyUsSection id="whyus" />
     <EpilogSection id="epilog" />
