@@ -14,14 +14,14 @@ import { Link } from "@inertiajs/vue3";
                     </h2>
                     <div class="mb-4">
                         <p class="font-bold">Privlačne spletne strani:</p>
-                        <ul class="mb-6 list-disc list-inside">
+                        <ul class="mb-6 list-disc list-outside ms-6">
                             <li>
                                 Zasnujemo moderne, funkcionalne in uporabnikom prijazne spletne strani, ki
                                 odražajo vašo blagovno znamko.
                             </li>
                         </ul>
                         <p class="font-bold">Inovativne aplikacije:</p>
-                        <ul class="mb-6 list-disc list-inside">
+                        <ul class="mb-6 list-disc list-outside ms-6">
                             <li>
                                 Od ideje do izvedbe - razvijamo aplikacije, ki navdušujejo z uporabniško
                                 izkušnjo in zmogljivostjo.

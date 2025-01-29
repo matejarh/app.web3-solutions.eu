@@ -4,6 +4,7 @@ import TopNavigation from "@/Components/Landing/TopNavigation.vue";
 import { ref } from "vue";
 import PageFooter from "../Components/Landing/PageFooter.vue";
 import HeroSection from "@/Components/WebDesign/HeroSection.vue";
+import WebDesignSection from "@/Components/WebDesign/Partials/WebDesignSection.vue";
 
 defineProps({
   canLogin: {
@@ -26,6 +27,7 @@ const handleScroll = (n) => {
 
     <HeroSection id="home" />
 
+    <WebDesignSection id="web_design" />
 
     <PageFooter id="footer" />
   </CleanLayout>
