@@ -10,7 +10,7 @@ import { ArrowRightIcon } from "@heroicons/vue/24/solid";
             <div class="grid gap-16 items-center lg:grid-cols-2">
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                        Izdelava spletnih strani in aplikacij
+                        Spletni razvoj
                     </h2>
                     <div class="mb-4">
                         <p class="font-bold">Privlačne spletne strani:</p>

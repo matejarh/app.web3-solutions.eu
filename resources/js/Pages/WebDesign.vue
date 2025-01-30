@@ -5,6 +5,10 @@ import { ref } from "vue";
 import PageFooter from "../Components/Landing/PageFooter.vue";
 import HeroSection from "@/Components/WebDesign/HeroSection.vue";
 import WebDesignSection from "@/Components/WebDesign/Partials/WebDesignSection.vue";
+import ContactInformationSection from "@/Components/Landing/ContactInformationSection.vue";
+import AttractiveWebsites from "@/Components/WebDesign/Partials/AttractiveWebsites.vue";
+import SupportAndMaintenance from "@/Components/WebDesign/Partials/SupportAndMaintenance.vue";
+import InnovativeApplications from "@/Components/WebDesign/Partials/InnovativeApplications.vue";
 
 defineProps({
   canLogin: {
@@ -27,7 +31,15 @@ const handleScroll = (n) => {
 
     <HeroSection id="home" />
 
-    <WebDesignSection id="web_design" />
+   <!--  <WebDesignSection id="web_design" /> -->
+
+    <AttractiveWebsites id="attractive_websites" />
+
+    <InnovativeApplications id="innovative_applications" />
+
+    <SupportAndMaintenance id="support_and_maintenance" />
+
+    <ContactInformationSection id="contact" />
 
     <PageFooter id="footer" />
   </CleanLayout>
