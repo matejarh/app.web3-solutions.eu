@@ -25,7 +25,7 @@ const appName = computed(() => {
                         <h2 class="mb-6 text-sm font-semibold text-primary-900 uppercase dark:text-white">Vsebina</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="">
-                                <inertia-link :href="route('web-design')" class="hover:underline">Izdelava spletnih strani in aplikacij</inertia-link>
+                                <inertia-link :href="route('web-design')" class="hover:underline">Spletni razvoj</inertia-link>
                             </li>
                             <li>
                                 <inertia-link :href="route('education')" class="hover:underline">Izobraževanje</inertia-link>
