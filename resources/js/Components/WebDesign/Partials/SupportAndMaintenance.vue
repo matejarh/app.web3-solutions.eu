@@ -1,6 +1,21 @@
 <script setup>
+import AnimatedLayout from '@/Components/Landing/AnimatedLayout.vue';
 import { ArrowPathIcon, LifebuoyIcon, ShieldCheckIcon } from '@heroicons/vue/24/outline';
-import {  } from '@heroicons/vue/24/solid';
+
+const services = [
+    {
+        icon: LifebuoyIcon,
+        text: 'Nudimo stalno podporo in vzdrževanje za zagotavljanje nemotenega delovanja vaših spletnih strani in aplikacij.'
+    },
+    {
+        icon: ArrowPathIcon,
+        text: 'Redno posodabljamo in izboljšujemo funkcionalnosti glede na vaše potrebe in povratne informacije.'
+    },
+    {
+        icon: ShieldCheckIcon,
+        text: 'Zagotavljamo varnostne posodobitve in varnostne kopije za zaščito vaših podatkov.'
+    }
+];
 </script>
 
 <template>
@@ -12,28 +27,12 @@ import {  } from '@heroicons/vue/24/solid';
                 </div>
 
                 <div class="space-y-8 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-12 sm:space-y-0">
-                    <div class="flex flex-col items-center">
+                    <div v-for="(service, index) in services" :key="index" class="flex flex-col items-center">
                         <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                            <LifebuoyIcon class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" />
+                            <component :is="service.icon" class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" />
                         </div>
                         <p class="text-gray-500 dark:text-gray-400 text-center">
-                            Nudimo stalno podporo in vzdrževanje za zagotavljanje nemotenega delovanja vaših spletnih strani in aplikacij.
-                        </p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                            <ArrowPathIcon class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" />
-                        </div>
-                        <p class="text-gray-500 dark:text-gray-400 text-center">
-                            Redno posodabljamo in izboljšujemo funkcionalnosti glede na vaše potrebe in povratne informacije.
-                        </p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                            <ShieldCheckIcon class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" />
-                        </div>
-                        <p class="text-gray-500 dark:text-gray-400 text-center">
-                            Zagotavljamo varnostne posodobitve in varnostne kopije za zaščito vaših podatkov.
+                            {{ service.text }}
                         </p>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import PageFooter from "../Components/Landing/PageFooter.vue";
 import HeroSection from "@/Components/Education/HeroSection.vue";
 import OfficeProductivity from "./Education/Partials/OfficeProductivity.vue";
 import Comunication from "./Education/Partials/Comunication.vue";
+import ContactInformationSection from "@/Components/Landing/ContactInformationSection.vue";
 
 defineProps({
   canLogin: {
@@ -30,8 +31,8 @@ const handleScroll = (n) => {
     <HeroSection id="home" />
 
     <OfficeProductivity :delay="700" id="office_productivity" />
-    <Comunication :delay="1300" id="comunication" />
-
+    <!-- <Comunication :delay="1300" id="comunication" /> -->
+    <ContactInformationSection id="contact" />
     <PageFooter id="footer" />
   </CleanLayout>
 </template>

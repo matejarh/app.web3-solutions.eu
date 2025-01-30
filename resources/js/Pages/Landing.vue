@@ -5,7 +5,7 @@ import HeroSection from "@/Components/Landing/HeroSection.vue";
 import TopNavigation from "@/Components/Landing/TopNavigation.vue";
 import { ref } from "vue";
 import PageFooter from "../Components/Landing/PageFooter.vue";
-import ComputerRepairSection from "../Components/Landing/ComputerRepairSection.vue";
+import ComputerRepairSection from "@/Components/Landing/ComputerRepairSection.vue";
 import FeaturesSection from "@/Components/Landing/FeaturesSection.vue";
 import LogosSection from "@/Components/Landing/LogosSection.vue";
 import CtaSection from "@/Components/Landing/CtaSection.vue";

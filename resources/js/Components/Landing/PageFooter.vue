@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import ApplicationLogo from "../TopNavigation/ApplicationLogo.vue";
 import { Link } from "@inertiajs/vue3";
+import AnimatedLayout from "./AnimatedLayout.vue";
 
 const year = computed(() => {
     return new Date().getFullYear();
@@ -12,30 +13,35 @@ const appName = computed(() => {
 </script>
 
 <template>
-    <footer class="p-4 bg-primary-50 sm:p-6 dark:bg-primary-900">
-        <div class="mx-auto max-w-screen-xl">
-            <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <ApplicationLogo />
-                </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                    <div class=""></div>
-                    <div class=""></div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-primary-900 uppercase dark:text-white">Vsebina</h2>
-                        <ul class="text-gray-600 dark:text-gray-400">
-                            <li class="">
-                                <inertia-link :href="route('web-design')" class="hover:underline">Spletni razvoj</inertia-link>
-                            </li>
-                            <li>
-                                <inertia-link :href="route('education')" class="hover:underline">Izobraževanje</inertia-link>
-                            </li>
-                            <li>
-                                <inertia-link :href="route('service')" class="hover:underline">Servis računalnikov</inertia-link>
-                            </li>
-                        </ul>
+    <AnimatedLayout :delay="200">
+        <footer class="p-4 bg-primary-50 sm:p-6 dark:bg-primary-900">
+            <div class="mx-auto max-w-screen-xl">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <ApplicationLogo />
                     </div>
-                    <!-- <div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-primary-900 uppercase dark:text-white">Vsebina
+                            </h2>
+                            <ul class="text-gray-600 dark:text-gray-400">
+                                <li class="">
+                                    <inertia-link :href="route('web-design')" class="hover:underline">Spletni
+                                        razvoj</inertia-link>
+                                </li>
+                                <li>
+                                    <inertia-link :href="route('education')"
+                                        class="hover:underline">Izobraževanje</inertia-link>
+                                </li>
+                                <li>
+                                    <inertia-link :href="route('service')" class="hover:underline">Servis
+                                        računalnikov</inertia-link>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div>
                         <h2 class="mb-6 text-sm font-semibold text-primary-900 uppercase dark:text-white">Follow us</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
@@ -46,7 +52,7 @@ const appName = computed(() => {
                             </li>
                         </ul>
                     </div> -->
-                    <!-- <div>
+                        <!-- <div>
                         <h2 class="mb-6 text-sm font-semibold text-primary-900 uppercase dark:text-white">Legal</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
@@ -57,15 +63,15 @@ const appName = computed(() => {
                             </li>
                         </ul>
                     </div> -->
+                    </div>
                 </div>
-            </div>
-            <hr class="my-6 border-primary-200 sm:mx-auto dark:border-primary-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ year }}
-                    <Link href="/" class="hover:underline">{{ appName }}™</Link>. Vse
-                    pravice pridržane.
-                </span>
-                <!-- <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                <hr class="my-6 border-primary-200 sm:mx-auto dark:border-primary-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ year }}
+                        <Link href="/" class="hover:underline">{{ appName }}™</Link>. Vse
+                        pravice pridržane.
+                    </span>
+                    <!-- <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a
             href="#"
             class="text-primary-500 hover:text-primary-900 dark:hover:text-white"
@@ -150,7 +156,8 @@ const appName = computed(() => {
             </svg>
           </a>
         </div> -->
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </AnimatedLayout>
 </template>

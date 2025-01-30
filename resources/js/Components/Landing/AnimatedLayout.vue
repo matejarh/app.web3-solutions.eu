@@ -1,9 +1,9 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, Transition } from "vue";
 
 const props = defineProps({
   animationType: {
-    default: "fade",
+    default: "animate__animated animate__bounceInUp",
     type: String,
   },
   delay: {
@@ -37,7 +37,7 @@ onMounted(() => {
 
 <template>
   <div ref="target" class="min-h-[20vh]">
-    <Transition enter-active-class="animate__animated animate__bounceInUp">
+    <Transition :enter-active-class="animationType">
       <div v-show="animate">
         <slot />
       </div>
