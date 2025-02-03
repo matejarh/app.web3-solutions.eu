@@ -37,8 +37,8 @@ const navItems = ref([
                 <MobileMenu :scroll-top="scrollTop" />
             </div>
 
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+                <ul class="flex flex-col p-4 lg:p-0 mt-4 font-medium border rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
                     <NavItem as="link" :link="route('index')" :scroll-top="scrollTop">
                         <HomeIcon class="transition-all duration-300 ease-in-out mt-1"
                             :class="scrollTop > 100 ? 'w-3 h-3' : 'w-4 h-4'" />

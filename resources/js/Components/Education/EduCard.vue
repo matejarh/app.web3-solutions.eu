@@ -1,6 +1,18 @@
 <script setup>
 import { ArrowRightIcon } from '@heroicons/vue/24/solid';
 import { ref } from 'vue';
+import DialogModal from '../DialogModal.vue';
+
+defineProps({
+    selectedDetails: {
+        type: String,
+        default: 'Podrobnosti',
+    },
+    selectedTitle: {
+        type: String,
+        default: 'Title',
+    },
+});
 
 const showDetails = ref(false);
 </script>
@@ -30,6 +42,16 @@ const showDetails = ref(false);
                 <ArrowRightIcon class="w-5 h-5 ml-2 -mr-1" />
             </button>
         </div>
-
+        <DialogModal :show="showDetails" @close="showDetails = false">
+            <template #title><span v-html="selectedTitle"></span> </template>
+            <template #content>
+                <p v-html="selectedDetails"></p>
+            </template>
+            <template #footer>
+                <button @click="showDetails = false" class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700">
+                    Zapri
+                </button>
+            </template>
+        </DialogModal>
     </div>
 </template>

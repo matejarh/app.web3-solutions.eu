@@ -21,7 +21,7 @@ const appNameSplit = computed(() => {
   <Link :href="route('index')" class="flex items-center justify-between mr-4">
     <img
       :src="Logo"
-      class="mr-3 transition-all ease-in-out duration-300"
+      class="mr-3 transition-all ease-in-out duration-300 "
       :class="size === 'small' ? 'h-6 w-6' : 'h-8 w-8'"
       :alt="appName + ' Logo'"
     />

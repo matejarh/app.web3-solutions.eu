@@ -25,7 +25,7 @@ const links = ref([
     <Dropdown>
         <template #trigger>
             <button type="button"
-                class="transition-all ease-in-out duration-300 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="transition-all ease-in-out duration-300 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 :class="{ 'text-xs': scrollTop > 100 }" aria-controls="navbar-sticky" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="transition-all ease-in-out duration-300" :class="scrollTop > 100 ? 'w-4 h-4' : 'w-5 h-5'"
