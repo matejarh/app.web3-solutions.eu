@@ -9,6 +9,7 @@ import ContactInformationSection from "@/Components/Landing/ContactInformationSe
 import AttractiveWebsites from "@/Components/WebDesign/Partials/AttractiveWebsites.vue";
 import SupportAndMaintenance from "@/Components/WebDesign/Partials/SupportAndMaintenance.vue";
 import InnovativeApplications from "@/Components/WebDesign/Partials/InnovativeApplications.vue";
+import LogosSection from "@/Components/WebDesign/Partials/LogosSection.vue";
 
 defineProps({
   canLogin: {
@@ -38,6 +39,8 @@ const handleScroll = (n) => {
     <InnovativeApplications id="innovative_applications" />
 
     <SupportAndMaintenance id="support_and_maintenance" />
+
+    <LogosSection id="logos" />
 
     <ContactInformationSection id="contact" />
 
