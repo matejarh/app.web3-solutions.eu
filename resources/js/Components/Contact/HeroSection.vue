@@ -15,14 +15,14 @@ const appName = import.meta.env.VITE_APP_NAME;
             <h1
             class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-center text-primary-800 dark:text-white"
           >
-            <small>{{ appName }}</small> <br>Kontaktirajte nas
+            <small>{{ appName }}</small> <br>Kontakt
           </h1>
           <p
-            class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-center dark:text-gray-400"
+            class="max-w-2xl mb-6 w-full font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-center dark:text-gray-400"
           >
-            <!-- Vaš partner za digitalne rešitve in tehnološko podporo.<br />
-            Povezujemo kreativnost, inovacije in zanesljivost, da vaše ideje zaživijo v
-            digitalnem svetu. -->
+            Imate vprašanja ali potrebujete pomoč?
+            Naša ekipa je tukaj, da vam pomaga. <br />
+            Stopite v stik z nami preko spodnjih kontaktnih podatkov.
           </p>
           <!-- <button
                         class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
