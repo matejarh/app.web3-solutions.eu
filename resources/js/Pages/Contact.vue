@@ -5,6 +5,7 @@ import { ref } from "vue";
 import PageFooter from "../Components/Landing/PageFooter.vue";
 import HeroSection from "@/Components/Contact/HeroSection.vue";
 import ContactInformationSection from "@/Components/Landing/ContactInformationSection.vue";
+import AboutUs from "@/Components/Contact/AboutUs.vue";
 
 
 defineProps({
@@ -30,6 +31,7 @@ const handleScroll = (n) => {
     <!-- <OurServices id="services" />
     <WhyUs id="whyus" /> -->
     <ContactInformationSection id="contact" />
+    <AboutUs id="aboutus" />
     <!-- <Epilog id="epilog" /> -->
     <PageFooter id="footer" />
   </CleanLayout>
