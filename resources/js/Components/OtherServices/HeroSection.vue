@@ -16,7 +16,7 @@ const appName = import.meta.env.VITE_APP_NAME;
                     </h1>
                     <p
                         class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl text-center dark:text-gray-400">
-                        Pri {{ appName }}, vam hitra in enostavno uredimo digitalne storitve
+                        Pri {{ appName }}, vam hitro in enostavno uredimo digitalne storitve
                     </p>
                     <!-- <button
                         class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
