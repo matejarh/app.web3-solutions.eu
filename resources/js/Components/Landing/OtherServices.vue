@@ -18,8 +18,7 @@ import { ArrowRightIcon } from "@heroicons/vue/24/outline";
                     </h2>
                     <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
                         <span class="font-bold">Hitra in enostavna ureditev digitalnih storitev:</span><br />
-                        Pomagamo vam in vaši ekipi osvojiti nova znanja – od osnov računalništva do
-                        naprednega programiranja.
+                        Potrebujete pomoč pri prevzemu in namestitvi sigen-ce certifikata, dostopu do e-Davkov, e-Uprave, e-Osebne ali urejanju dostopa do DoZdravnika? Prepustite to strokovnjakom!
                     </p>
 
                     <Link :href="route('services')"
