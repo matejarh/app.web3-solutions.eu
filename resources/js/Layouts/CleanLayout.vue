@@ -40,7 +40,7 @@ const headerClasses = computed(() => {
         @scroll="handleScroll"
         id="main"
         :class="{ 'flex flex-col justify-center': verticalAligment === 'center' }"
-        class="h-screen overflow-y-auto scrollbar scroll-smooth hover:scrollbar-thumb-primary-500 active:scrollbar-thumb-primary-400 scrollbar-thumb-primary-300 dark:scrollbar-thumb-primary-900 scrollbar-track-transparent"
+        class="h-screen overflow-y-auto scrollbar-thin  scroll-smooth hover:scrollbar-thumb-primary-500 active:scrollbar-thumb-primary-400 scrollbar-thumb-primary-300 dark:scrollbar-thumb-primary-900 scrollbar-track-transparent"
       >
         <slot />
       </main>
