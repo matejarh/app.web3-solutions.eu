@@ -5,9 +5,10 @@ import { ref } from "vue";
 import PageFooter from "../Components/Landing/PageFooter.vue";
 
 import ContactInformationSection from "@/Components/Landing/ContactInformationSection.vue";
-import Epilog from "@/Components/Service/Epilog.vue";
+
 import HeroSection from "@/Components/OtherServices/HeroSection.vue";
 import OurServices from "@/Components/OtherServices/OurServices.vue";
+import Epilog from "@/Components/OtherServices/Epilog.vue";
 
 defineProps({
   canLogin: {
@@ -30,8 +31,8 @@ const handleScroll = (n) => {
 
     <HeroSection id="home" />
     <OurServices id="services" />
+    <Epilog id="epilog" />
     <ContactInformationSection id="contact" />
-    <!-- <Epilog id="epilog" /> -->
     <PageFooter id="footer" />
   </CleanLayout>
 </template>
