@@ -11,6 +11,7 @@ Route::get('/', [LandingController::class, 'index'])->name('index');
 Route::get('/izobrazevanje', [LandingController::class, 'education'])->name('education');
 Route::get('/servis', [LandingController::class, 'service'])->name('service');
 Route::get('/spletni-razvoj', [LandingController::class, 'webDesign'])->name('web-design');
+Route::get('/ostale-storitve', [LandingController::class, 'otherServices'])->name('services');
 Route::get('/kontakt', [LandingController::class, 'contact'])->name('contact');
 
 Route::post('/language-switch', [LanguageController::class, 'switch'])->name('switch.language');

@@ -54,6 +54,17 @@ class LandingController extends Controller
     }
 
     /**
+     * Display the other services page.
+     *
+     * @return \Inertia\Response
+     */
+    public function otherServices() : Response {
+        return Inertia::render('OtherServices', [
+
+        ]);
+    }
+
+    /**
      * Display the contact page.
      *
      * @return \Inertia\Response

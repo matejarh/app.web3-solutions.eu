@@ -39,6 +39,9 @@ const appName = computed(() => {
                                     <inertia-link :href="route('service')" class="hover:underline">Servis
                                         računalnikov</inertia-link>
                                 </li>
+                                <li>
+                                    <inertia-link :href="route('services')" class="hover:underline">Ostale storitve</inertia-link>
+                                </li>
                             </ul>
                         </div>
                         <!-- <div>

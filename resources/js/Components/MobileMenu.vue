@@ -9,16 +9,18 @@ const props = defineProps({
         default: 0,
         type: Number,
     },
+    navItems: {
+        type: Array,
+        required: true,
+    },
 });
 
 const page = usePage();
 
-const links = ref([
-    { text: 'Spletni razvoj', href: page.props.currentRoute === 'index' ? '#web_design' : route('web-design') },
-    { text: 'Izobraževanje', href: page.props.currentRoute === 'index' ? '#education' : route('education') },
-    { text: 'Računalniški Servis', href: page.props.currentRoute === 'index' ? '#service' : route('service') },
-    { text: 'Kontakt', href: page.props.currentRoute === 'index' ? '#contact' : route('contact') }
-]);
+const links = ref(props.navItems.map(item => ({
+    text: item.text,
+    href: page.props.currentRoute === 'index' ? item.hash : route(item.routeName)
+})));
 </script>
 
 <template>

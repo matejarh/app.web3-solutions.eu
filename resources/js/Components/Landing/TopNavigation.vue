@@ -8,7 +8,6 @@ import LangSwitch from '../TopNavigation/LangSwitch.vue';
 import NavItem from './NavItem.vue';
 import ApplicationLogo from '../TopNavigation/ApplicationLogo.vue';
 
-
 const props = defineProps({
     scrollTop: {
         default: 0,
@@ -22,6 +21,7 @@ const navItems = ref([
     { text: 'Spletni razvoj', routeName: 'web-design', hash: '#web_design' },
     { text: 'Izobraževanje', routeName: 'education', hash: '#education' },
     { text: 'Računalniški servis', routeName: 'service', hash: '#service' },
+    { text: 'Ostale storitve', routeName: 'services', hash: '#services' },
     { text: 'Kontakt', routeName: 'contact', hash: '#contact' }
 ]);
 </script>
@@ -34,7 +34,7 @@ const navItems = ref([
 
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 <LangSwitch />
-                <MobileMenu :scroll-top="scrollTop" />
+                <MobileMenu :scroll-top="scrollTop" :nav-items="navItems" />
             </div>
 
             <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">

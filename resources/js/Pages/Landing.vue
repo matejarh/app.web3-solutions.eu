@@ -14,6 +14,7 @@ import EducationSection from "@/Components/Landing/EducationSection.vue";
 import EpilogSection from "@/Components/Landing/EpilogSection.vue";
 import WhyUsSection from "@/Components/Landing/WhyUsSection.vue";
 import ContactInformationSection from "@/Components/Landing/ContactInformationSection.vue";
+import OtherServices from "@/Components/Landing/OtherServices.vue";
 defineProps({
   canLogin: {
     type: Boolean,
@@ -37,6 +38,7 @@ const handleScroll = (n) => {
     <WebDesignSection id="web_design" />
     <EducationSection id="education" />
     <ComputerRepairSection id="service" />
+    <OtherServices id="services" />
     <!-- <CtaSection id="cta" /> -->
     <WhyUsSection id="whyus" />
     <EpilogSection id="epilog" />
