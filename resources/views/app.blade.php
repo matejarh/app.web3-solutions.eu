@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-ancestors 'none'" /> --}}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-ancestors 'none'" />
+    <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
