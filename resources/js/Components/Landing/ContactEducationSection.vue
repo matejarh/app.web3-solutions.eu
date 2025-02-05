@@ -10,17 +10,18 @@ const contactInfo = [
         link: 'mailto:info@web3-solutions.eu'
     },
     {
+        icon: AtSymbolIcon,
+        title: 'Email',
+        content: 'bojanabled@gmail.com',
+        link: 'mailto:bojanabled@gmail.com'
+    },
+    {
         icon: DevicePhoneMobileIcon,
         title: 'Telefon',
-        content: '+386 70 481 181',
-        link: 'tel:+38670481181'
+        content: '+386 31 395 225',
+        link: 'tel:+38632395225'
     },
-/*     {
-        icon: MapPinIcon,
-        title: 'Naslov',
-        content: 'Web3 Solutions, Kamna Gorica 61, 4246 Kamna Gorica, Slovenija',
-        link: null
-    } */
+
 ];
 </script>
 
@@ -32,7 +33,7 @@ const contactInfo = [
                     <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Kontaktirajte nas</h2>
                     <p class="text-gray-500 sm:text-xl dark:text-gray-400">Pišite nam in odgovorili vam bomo v najkrajšem možnem času.</p>
                 </div>
-                <div class="space-y-8 md:grid sm:grid-cols-2 lg:grid-cols-2 md:gap-12 md:space-y-0">
+                <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                     <div v-for="(info, index) in contactInfo" :key="index" class="flex flex-col items-center">
                         <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                             <component :is="info.icon" class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" />

@@ -3,12 +3,10 @@ import CleanLayout from "@/Layouts/CleanLayout.vue";
 import TopNavigation from "@/Components/Landing/TopNavigation.vue";
 import { ref } from "vue";
 import PageFooter from "../Components/Landing/PageFooter.vue";
-
-import ContactInformationSection from "@/Components/Landing/ContactInformationSection.vue";
-
 import HeroSection from "@/Components/OtherServices/HeroSection.vue";
 import OurServices from "@/Components/OtherServices/OurServices.vue";
 import Epilog from "@/Components/OtherServices/Epilog.vue";
+import ContactEducationSection from "@/Components/Landing/ContactEducationSection.vue";
 
 defineProps({
   canLogin: {
@@ -32,7 +30,7 @@ const handleScroll = (n) => {
     <HeroSection id="home" />
     <OurServices id="services" />
     <Epilog id="epilog" />
-    <ContactInformationSection id="contact" />
+    <ContactEducationSection id="contact" />
     <PageFooter id="footer" />
   </CleanLayout>
 </template>
