@@ -63,6 +63,7 @@
     "Finish enabling two factor authentication.": "Finish enabling two factor authentication.",
     "For your security, please confirm your password to continue.": "For your security, please confirm your password to continue.",
     "Forbidden": "Forbidden",
+    "Forgot Password": "Forgot Password",
     "Forgot your password?": "Forgot your password?",
     "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.": "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.",
     "Go to page :page": "Go to page :page",
@@ -134,6 +135,7 @@
     "Role": "Role",
     "Save": "Save",
     "Saved.": "Saved.",
+    "Secure Area": "Secure Area",
     "Select A New Photo": "Select A New Photo",
     "Server Error": "Server Error",
     "Service Unavailable": "Service Unavailable",
@@ -207,5 +209,7 @@
     "Computer Service and Maintenance": "Computer Service and Maintenance",
     "Other Services": "Other Services",
     "Welcome": "Welcome",
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "Email Verification": "Email Verification",
+    "Two-factor Confirmation": "Two-factor Confirmation"
 }

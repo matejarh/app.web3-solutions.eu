@@ -43,9 +43,9 @@
     "Created.": "Ustvarjeno.",
     "Current Password": "Trenutno geslo",
     "Dashboard": "Nadzorna plošča",
-    "Delete": "Briši",
+    "Delete": "Izbriši",
     "Delete Account": "Brisanje računa",
-    "Delete API Token": "Brisanje API žetona",
+    "Delete API Token": "Izbriši API žeton",
     "Delete Team": "Brisanje skupine",
     "Disable": "Onemogoči",
     "Done.": "Končano.",
@@ -86,7 +86,7 @@
     "Leave Team": "Zapisti skupino",
     "length": "dolžina",
     "Location": "Lokacija",
-    "Log in": "Prijavi se.",
+    "Log in": "Prijava",
     "Log Out": "Odjava",
     "Log Out Other Browser Sessions": "Odjavi Druge Seje Brskalnika",
     "Login": "Prijava",
@@ -139,6 +139,7 @@
     "Save": "Shrani",
     "Saved.": "Shranjeno.",
     "Scroll to top": "Na vrh",
+    "Secure Area": "Varno območje",
     "Select A New Photo": "Izberi Novo sliko",
     "Server Error": "Napaka na strežniku",
     "Service Unavailable": "Servis ni dostopen",
@@ -212,5 +213,7 @@
     "Your new password is required.": "Vpis novega gesla je obvezen.",
     "Web Development": "Spletni razvoj",
     "Computer Service and Maintenance": "Računalniški Servis In Vzdrževanje",
-    "Welcome": "Dobrodošli"
+    "Welcome": "Dobrodošli",
+    "Two-factor Confirmation": "Potrditev dvofaktorske avtentikacije",
+    "Forgot Password": "Pozabljeno geslo"
 }
