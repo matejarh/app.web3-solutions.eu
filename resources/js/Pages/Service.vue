@@ -9,6 +9,7 @@ import WhyUs from "@/Components/Service/WhyUs.vue";
 import ContactInformationSection from "@/Components/Landing/ContactInformationSection.vue";
 import Epilog from "@/Components/Service/Epilog.vue";
 
+
 defineProps({
   canLogin: {
     type: Boolean,
@@ -25,7 +26,7 @@ const handleScroll = (n) => {
 </script>
 
 <template>
-  <CleanLayout title="Računalniški Servis In Vzdrževanje" vertical-aligment="top" @scroll-top="handleScroll">
+  <CleanLayout :title="__('Computer Service and Maintenance')" vertical-aligment="top" @scroll-top="handleScroll">
     <TopNavigation :scroll-top="scrollTop" />
 
     <HeroSection id="home" />

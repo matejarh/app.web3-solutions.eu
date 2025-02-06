@@ -24,7 +24,7 @@ const handleScroll = (n) => {
 </script>
 
 <template>
-  <CleanLayout title="Kontakt" vertical-aligment="top" @scroll-top="handleScroll">
+  <CleanLayout :title="__('Contact')" vertical-aligment="top" @scroll-top="handleScroll">
     <TopNavigation :scroll-top="scrollTop" />
 
     <HeroSection id="home" />

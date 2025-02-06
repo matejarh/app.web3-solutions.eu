@@ -33,6 +33,7 @@
     "Confirm": "Potrditev",
     "Confirm Password": "Potrdite geslo",
     "Connect wallet": "Poveži se z denarnico",
+    "Contact": "Kontakt",
     "Create": "Ustvari",
     "Create a new team to collaborate with others on projects.": "Ustvari skupino za sodelovanje projektih.",
     "Create Account": "Ustvari Račun",
@@ -102,6 +103,7 @@
     "of": "od",
     "Once a team is deleted, all of its resources and data will be permanently deleted. Before deleting this team, please download any data or information regarding this team that you wish to retain.": "Ko je skupina izbrisana, so odstranjeni tudi podatki skupine. Pred brisanjem skupine prenesite vse podatke skupine, ki jih želite ohraniti.",
     "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.": "Ko je račun izbrisan, so odstranjeni tudi vsi podatki računa. Pred brisanjem prenesite vse podatke računa, ki jih želite ohraniti.",
+    "Other Services": "Ostale storitve",
     "Page Expired": "Stran je potekla",
     "Pagination Navigation": "Navigacija po straneh",
     "Password": "Geslo",
@@ -207,5 +209,8 @@
     "You may not leave a team that you created.": "Lastne ustvarjene skupine ni mogoče zapustiti.",
     "Your current password is required.": "Vpis trenutnega gesla je obvezen.",
     "Your email address is unverified.": "Vaš e-poštni naslov ni preverjen.",
-    "Your new password is required.": "Vpis novega gesla je obvezen."
+    "Your new password is required.": "Vpis novega gesla je obvezen.",
+    "Web Development": "Spletni razvoj",
+    "Computer Service and Maintenance": "Računalniški Servis In Vzdrževanje",
+    "Welcome": "Dobrodošli"
 }

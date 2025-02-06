@@ -24,7 +24,7 @@ const handleScroll = (n) => {
 </script>
 
 <template>
-  <CleanLayout title="Ostale storitve" vertical-aligment="top" @scroll-top="handleScroll">
+  <CleanLayout :title="__('Other Services')" vertical-aligment="top" @scroll-top="handleScroll">
     <TopNavigation :scroll-top="scrollTop" />
 
     <HeroSection id="home" />
