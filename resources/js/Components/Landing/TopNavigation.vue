@@ -28,7 +28,7 @@ const navItems = ref([
 
 <template>
     <nav class="fixed w-full z-20 top-0 start-0 transition-all ease-in-out duration-300"
-        :class="scrollTop > 100 ? 'bg-primary-950 bg-opacity-95' : 'bg-transparent'">
+        :class="scrollTop > 100 ? 'bg-primary-600 dark:bg-primary-950 bg-opacity-95' : 'bg-transparent'">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <ApplicationLogo :size="scrollTop > 100 ? 'small' : 'default'" />
 
