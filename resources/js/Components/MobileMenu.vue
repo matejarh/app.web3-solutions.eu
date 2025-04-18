@@ -30,7 +30,7 @@ const links = ref(props.navItems.map(item => ({
 </script>
 
 <template>
-    <Dropdown @is-opened="handleIsOpened">
+    <Dropdown @is-opened="handleIsOpened" class="block lg:hidden" :is-open="isOpened" align="right" width="48">
         <template #trigger>
             <Hamburger :is-open="isOpened" @toggle="" :scroll-top="scrollTop" />
         </template>
