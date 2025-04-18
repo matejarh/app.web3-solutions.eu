@@ -16,13 +16,27 @@ const props = defineProps({
     },
 });
 
+const emit = defineEmits(['is-opened']);
+
 let open = ref(false);
 
 const closeOnEscape = (e) => {
     if (open.value && e.key === 'Escape') {
         open.value = false;
+        emit('is-opened', open.value)
     }
 };
+
+const handleToggle = () => {
+    open.value = !open.value;
+    emit('is-opened', open.value);
+};
+
+const handleHide = () => {
+    open.value = false;
+    emit('is-opened', open.value);
+};
+
 
 onMounted(() => document.addEventListener('keydown', closeOnEscape));
 onUnmounted(() => document.removeEventListener('keydown', closeOnEscape));
@@ -48,12 +62,12 @@ const alignmentClasses = computed(() => {
 
 <template>
     <div class="relative">
-        <div @click="open = ! open">
+        <div @click="handleToggle">
             <slot name="trigger" />
         </div>
 
         <!-- Full Screen Dropdown Overlay -->
-        <div v-show="open" class="fixed inset-0 z-40" @click="open = false" />
+        <div v-show="open" class="fixed inset-0 z-40" @click="handleHide" />
 
         <Transition
             enter-active-class="transition ease-out duration-200"
@@ -68,7 +82,7 @@ const alignmentClasses = computed(() => {
                 class="absolute z-50 mt-2 rounded-md shadow-lg"
                 :class="[widthClass, alignmentClasses]"
                 style="display: none;"
-                @click="open = false"
+                @click="handleHide"
             >
                 <div class="rounded-md ring-1 ring-black ring-opacity-5" :class="contentClasses">
                     <slot name="content" />
