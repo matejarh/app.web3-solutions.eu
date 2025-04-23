@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { usePage } from '@inertiajs/vue3';
 import { HomeIcon } from '@heroicons/vue/24/solid';
-
 import MobileMenu from '@/Components/MobileMenu.vue';
 import LangSwitch from '../TopNavigation/LangSwitch.vue';
 import NavItem from './NavItem.vue';
@@ -15,14 +13,12 @@ const props = defineProps({
     },
 });
 
-const page = usePage();
-
 const navItems = ref([
-    { text: 'Spletni razvoj', routeName: 'web-design', hash: '#web_design' },
-    { text: 'Izobraževanje', routeName: 'education', hash: '#education' },
-    { text: 'Računalniški servis', routeName: 'service', hash: '#service' },
-    { text: 'Ostale storitve', routeName: 'services', hash: '#services' },
-    { text: 'Kontakt', routeName: 'contact', hash: '#contact' }
+    { text: 'Web Development', routeName: 'web-design', hash: '#web_design' },
+    { text: 'Education', routeName: 'education', hash: '#education' },
+    { text: 'Computer Service', routeName: 'service', hash: '#service' },
+    { text: 'Other Services', routeName: 'services', hash: '#services' },
+    { text: 'Contact', routeName: 'contact', hash: '#contact' }
 ]);
 </script>
 
@@ -33,7 +29,7 @@ const navItems = ref([
             <ApplicationLogo :size="scrollTop > 100 ? 'small' : 'default'" />
 
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <LangSwitch />
+                <!-- <LangSwitch /> -->
                 <MobileMenu :scroll-top="scrollTop" :nav-items="navItems" />
             </div>
 
@@ -44,14 +40,15 @@ const navItems = ref([
                             :class="scrollTop > 100 ? 'w-3 h-3' : 'w-4 h-4'" />
                     </NavItem>
                     <template v-for="item in navItems" :key="item.routeName">
-                        <NavItem v-if="page.props.currentRoute === 'index'" :link="item.hash" :scroll-top="scrollTop">
-                            {{ item.text }}
+                        <NavItem v-if="$page.props.currentRoute === 'index'" :link="item.hash" :scroll-top="scrollTop">
+                            {{ __(item.text) }}
                         </NavItem>
                         <NavItem v-else as="link" :link="route(item.routeName)" :scroll-top="scrollTop">
-                            {{ item.text }}
+                            {{ __(item.text) }}
                         </NavItem>
                     </template>
                 </ul>
+
             </div>
         </div>
     </nav>
