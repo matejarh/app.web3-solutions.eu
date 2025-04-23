@@ -6,15 +6,21 @@ use App\Http\Controllers\LanguageController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// Public routes
-Route::get('/', [LandingController::class, 'index'])->name('index');
-Route::get('/izobrazevanje', [LandingController::class, 'education'])->name('education');
-Route::get('/servis', [LandingController::class, 'service'])->name('service');
-Route::get('/spletni-razvoj', [LandingController::class, 'webDesign'])->name('web-design');
-Route::get('/ostale-storitve', [LandingController::class, 'otherServices'])->name('services');
-Route::get('/kontakt', [LandingController::class, 'contact'])->name('contact');
+// Add a route for language switching
+Route::post('lang', [LanguageController::class, 'switch'])->middleware(['web', 'throttle:10,1'])->name('lang.switch');
 
-Route::post('/language-switch', [LanguageController::class, 'switch'])->name('switch.language');
+// Ensure the locale is set dynamically based on the session
+Route::middleware(['web'])->group(function () {
+    // Public routes
+    Route::get('/', [LandingController::class, 'index'])->name('index');
+    Route::get('/izobrazevanje', [LandingController::class, 'education'])->name('education');
+    Route::get('/servis', [LandingController::class, 'service'])->name('service');
+    Route::get('/spletni-razvoj', [LandingController::class, 'webDesign'])->name('web-design');
+    Route::get('/ostale-storitve', [LandingController::class, 'otherServices'])->name('services');
+    Route::get('/kontakt', [LandingController::class, 'contact'])->name('contact');
+
+    Route::post('/language-switch', [LanguageController::class, 'switch'])->name('switch.language');
+});
 
 // Authenticated routes
 Route::middleware([
