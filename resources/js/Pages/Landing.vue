@@ -33,7 +33,6 @@ const handleScroll = (n) => {
 <template>
   <CleanLayout :title="__('Welcome')" vertical-aligment="top" @scroll-top="handleScroll">
     <TopNavigation :scroll-top="scrollTop" />
-
     <HeroSection id="home" />
     <WebDesignSection id="web_design" />
     <EducationSection id="education" />
