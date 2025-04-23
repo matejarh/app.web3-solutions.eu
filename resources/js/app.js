@@ -3,17 +3,16 @@ import '../css/animate.css';
 import '../css/app.css';
 import '../css/toast.css';
 
-import { createPinia } from 'pinia'
+import { createPinia } from 'pinia';
 import { createApp, h } from 'vue';
 import { Link, createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
-import Vue3Toasity, { toast, updateGlobalOptions } from 'vue3-toastify'
-import { Translator } from './Translator.js';
+import Vue3Toasity, { toast, updateGlobalOptions } from 'vue3-toastify';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
-const pinia = createPinia()
+const pinia = createPinia();
 
 updateGlobalOptions({
     autoClose: 3000,
@@ -22,13 +21,11 @@ updateGlobalOptions({
         userSelect: 'initial',
     },
     position: toast.POSITION.TOP_RIGHT,
-    theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light"
-    // theme: "dark"
+    theme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light",
 });
 
 import.meta.glob([
     '../images/errors/**',
-
 ]);
 
 createInertiaApp({
@@ -40,12 +37,21 @@ createInertiaApp({
             .use(ZiggyVue)
             .use(pinia)
             .component('InertiaLink', Link)
-            .use(Translator, props.initialPage.props.translations)
+            .mixin({
+                methods: {
+                    __(key, replace = {}) {
+                        let translation = props.initialPage.props.translations.messages[key] || key;
+                        Object.keys(replace).forEach((placeholder) => {
+                            translation = translation.replace(`:${placeholder}`, replace[placeholder]);
+                        });
+                        return translation;
+                    },
+                },
+            })
             .mount(el);
     },
 
     progress: {
         color: '#00B8D4',
     },
-
 });
