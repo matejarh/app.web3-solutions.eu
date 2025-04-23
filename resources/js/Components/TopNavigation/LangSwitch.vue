@@ -11,6 +11,7 @@ const switchLanguage = (lang) => {
     form.locale = lang;
     form.post(route("switch.language"), {
         preserveScroll: true,
+        preserveState: false,
     });
 };
 
