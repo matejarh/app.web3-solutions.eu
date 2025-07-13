@@ -20,7 +20,7 @@ export default defineComponent({
 
         // Establish WebSocket connection on component mount
         onMounted(() => {
-            const apikey = "ngayvTWcI50EDHfMuTj7eoEuP9BdBeIi"
+            const apikey = config('app.linch_api_key');
             const ws = new WebSocket('wss://api.1inch.exchange/v3.0/1/ws', {
                 headers: {
                     Authorization: `Basic ${apikey}`,

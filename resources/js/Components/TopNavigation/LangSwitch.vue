@@ -32,12 +32,11 @@ const languages = [
 <template>
     <NavDropdown>
         <template #trigger>
-            <button class="inline-flex items-center">
+
                 <component
                     :is="languages.find(lang => lang.code === $page.props.translations.locale)?.icon"
-                    class="h-5 w-5 rounded-full"
+                    class="size-6 rounded-full"
                 />
-            </button>
         </template>
         <ul>
             <DropdownItem

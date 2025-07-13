@@ -7,7 +7,7 @@ const props = defineProps({
 });
 
 const scrollToTop = () => {
-  document.getElementById("main").scrollTo(0, 0);
+  document.getElementById("main").scrollTo(0, 0, "smooth");
 };
 </script>
 

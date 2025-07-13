@@ -2,9 +2,9 @@
 import { ref } from 'vue';
 import { HomeIcon } from '@heroicons/vue/24/solid';
 import MobileMenu from '@/Components/MobileMenu.vue';
-import LangSwitch from '../TopNavigation/LangSwitch.vue';
 import NavItem from './NavItem.vue';
 import ApplicationLogo from '../TopNavigation/ApplicationLogo.vue';
+import LangSwitch from '../TopNavigation/LangSwitch.vue';
 
 const props = defineProps({
     scrollTop: {
@@ -28,8 +28,8 @@ const navItems = ref([
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <ApplicationLogo :size="scrollTop > 100 ? 'small' : 'default'" />
 
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <!-- <LangSwitch /> -->
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <LangSwitch class="" />
                 <MobileMenu :scroll-top="scrollTop" :nav-items="navItems" />
             </div>
 
